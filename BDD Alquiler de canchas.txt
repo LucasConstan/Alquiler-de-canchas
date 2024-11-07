@@ -1,0 +1,42 @@
+use AlquilerCanchas
+
+GO
+
+
+Create table Usuarios (
+DNI bigint primary key identity,
+Nombre nvarchar(50),
+Apellido nvarchar(50),
+Mail nvarchar(50),
+Rol nvarchar(50),
+Contraseña nvarchar(50),
+Bloqueado bit 
+)
+GO
+
+SET IDENTITY_INSERT Usuarios on;
+
+insert into Usuarios (DNI,Nombre,Apellido,Mail, Rol, Contraseña, Bloqueado)
+values
+(3453563635,'Lucas','Constan','mailfalso@gmail.com','Administrador','456lolo', 1)
+
+Create table Canchas (
+Num_cancha bigint primary key identity,
+Tamaño nvarchar(50),
+Cesped nvarchar(50),
+Estado nvarchar(50),
+Precio int
+)
+GO
+
+CREATE TABLE Reservas (
+    Id_Reserva INT PRIMARY KEY IDENTITY,
+	Num_cancha bigint foreign key references Canchas(Num_cancha), 
+    Fecha DATE NOT NULL,
+    Hora TIME 
+   
+    
+);
+
+
+DESKTOP-VUOOFDB\SQLEXPRESS\SQLEXPRESS

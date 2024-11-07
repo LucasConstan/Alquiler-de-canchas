@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1BB4980-A624-4C3A-B273-201FABF7F62D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Alquiler_de_canchas</RootNamespace>
+    <AssemblyName>Alquiler de canchas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-adapter, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.bouncy-castle-adapter.8.0.5\lib\net461\itext.bouncy-castle-adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-connector, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.commons, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.commons.8.0.5\lib\net461\itext.commons.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfua, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.pdfua.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.8.0.0\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.8.0.2\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlquilerCanchasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlquilerCanchasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBackUpRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBackUpRestore.Designer.cs">
+      <DependentUpon>FrmBackUpRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCambiarContraseña.Designer.cs">
+      <DependentUpon>FrmCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCambiarIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCambiarIdioma.Designer.cs">
+      <DependentUpon>FrmCambiarIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCambios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCambios.Designer.cs">
+      <DependentUpon>FrmCambios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCanchas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCanchas.Designer.cs">
+      <DependentUpon>FrmCanchas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCobrar.Designer.cs">
+      <DependentUpon>FrmCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearFamilia.Designer.cs">
+      <DependentUpon>FrmCrearFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEventos.Designer.cs">
+      <DependentUpon>FrmEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFacturas.Designer.cs">
+      <DependentUpon>FrmFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionPerfiles.Designer.cs">
+      <DependentUpon>FrmGestionPerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionUsuarios.Designer.cs">
+      <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSeleccionarCancha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSeleccionarCancha.Designer.cs">
+      <DependentUpon>FrmSeleccionarCancha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBackUpRestore.resx">
+      <DependentUpon>FrmBackUpRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCambiarContraseña.resx">
+      <DependentUpon>FrmCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCambiarIdioma.resx">
+      <DependentUpon>FrmCambiarIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCambios.resx">
+      <DependentUpon>FrmCambios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCanchas.resx">
+      <DependentUpon>FrmCanchas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCobrar.resx">
+      <DependentUpon>FrmCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearFamilia.resx">
+      <DependentUpon>FrmCrearFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEventos.resx">
+      <DependentUpon>FrmEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFacturas.resx">
+      <DependentUpon>FrmFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionPerfiles.resx">
+      <DependentUpon>FrmGestionPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionUsuarios.resx">
+      <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSeleccionarCancha.resx">
+      <DependentUpon>FrmSeleccionarCancha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="AlquilerCanchasDataSet.xsc">
+      <DependentUpon>AlquilerCanchasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AlquilerCanchasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlquilerCanchasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlquilerCanchasDataSet.xss">
+      <DependentUpon>AlquilerCanchasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-dimensiones-futbol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{a81c94d7-16f4-48f0-a217-2820fe65587f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{ede4d1c8-fc28-46a7-ae19-022ba7de176a}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{7a49ae52-eb71-4fbb-913b-02faf6c81248}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
